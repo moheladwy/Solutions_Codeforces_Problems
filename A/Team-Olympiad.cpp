@@ -7,30 +7,14 @@ int main()
     cin.tie(NULL);
     cout.tie(NULL);
 
-    int nStudents, nTeams;
+    int nStudents, nTeams, skill;
     cin >> nStudents;
-    int allSkills[nStudents];
     vector<vector<int>> skills(3);
 
     for (int i = 0; i < nStudents; i++)
     {
-        cin >> allSkills[i];
-    }
-
-    for (int i = 0; i < nStudents; i++)
-    {
-        if (allSkills[i] == 1)
-        {
-            skills[0].push_back(i + 1);
-        }
-        else if (allSkills[i] == 2)
-        {
-            skills[1].push_back(i + 1);
-        }
-        else
-        {
-            skills[2].push_back(i + 1);
-        }
+        cin >> skill;
+        skills[skill - 1].push_back(i + 1);
     }
 
     if (skills[0].size() == 0 || skills[1].size() == 0 || skills[2].size() == 0)
@@ -40,7 +24,6 @@ int main()
     }
 
     nTeams = min(min(skills[0].size(), skills[1].size()), skills[2].size());
-
     cout << nTeams << endl;
 
     for (int team = 0; team < nTeams; team++)
