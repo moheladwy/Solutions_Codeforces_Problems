@@ -1,4 +1,4 @@
 # Solutions_Codeforces_Problems
 Auther: Mohamed Hussein Eladwy.
 
-This repositary includes my solutions for codeforces problems that I have solved.
+This Repositary includes my Solutions for Codeforces Problems that I have Solved.
