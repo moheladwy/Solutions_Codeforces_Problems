@@ -11,6 +11,6 @@ This maybe not the best solution for the problem, but it got accepted with a goo
 
 I hope this repositry helps you to find and understand the solution of the problem you are looking for.
 
-Best regards, 
+Best Regards, 
 
 Mohamed Hussein Eladwy.
