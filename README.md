@@ -1,10 +1,4 @@
 # Solutions_Codeforces_Problems
-Auther
-
-    Name: Mohamed Hussein Eladwy.
-    Email: mohamed.h.eladwy@gmail.com
-
-
 This repositary includes my solutions for codeforces problems that I have solved.
 
 This maybe not the best solution for the problem, but it got accepted with a good performance.
