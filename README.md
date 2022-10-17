@@ -1,8 +1,8 @@
 # Solutions_Codeforces_Problems
 Auther
 
-    Mohamed Hussein Eladwy.
-    mohamed.h.eladwy@gmail.com
+    Name: Mohamed Hussein Eladwy.
+    Email: mohamed.h.eladwy@gmail.com
 
 
 This repositary includes my solutions for codeforces problems that I have solved.
