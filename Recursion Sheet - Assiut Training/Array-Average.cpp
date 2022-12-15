@@ -1,24 +1,23 @@
 #include <bits\stdc++.h>
-#include <iomanip>
 using namespace std;
+#define foi                      \
+    ios::sync_with_stdio(false); \
+    cout.tie(NULL);              \
+    cin.tie(NULL);
 
-void calc_avg(long double arr[], int n, long double avg = 0, int counter = 0)
+void calc_avg(long double arr[], int n, long double avg = 0, double counter = 0)
 {
-    if (n < 0)
+    if (!n)
     {
-        cout << std::setprecision(6) << avg / counter;
+        cout << std::fixed << avg / counter;
         return;
     }
-
-    calc_avg(arr, n - 1, avg + arr[n], counter + 1);
+    calc_avg(arr, n - 1, avg + arr[n - 1], counter + 1);
 }
 
 int main()
 {
-    ios::sync_with_stdio(false);
-    cout.tie(NULL);
-    cin.tie(NULL);
-
+    foi;
     int n;
     cin >> n;
 
@@ -26,7 +25,6 @@ int main()
     for (int i = 0; i < n; i++)
         cin >> arr[i];
 
-    calc_avg(arr, n - 1);
-
+    calc_avg(arr, n);
     return 0;
 }
