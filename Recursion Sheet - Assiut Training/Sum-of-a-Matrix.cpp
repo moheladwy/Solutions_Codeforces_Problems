@@ -1,26 +1,14 @@
 #include <bits\stdc++.h>
 using namespace std;
 
-ostream &operator<<(ostream &out, const vector<vector<int>> &result)
-{
-    for (const vector<int> &row : result)
-    {
-        for (const int &index : row)
-            out << index << ' ';
-        out << '\n';
-    }
-    return out;
-}
+#define ll long long
 
-void sum_matrics(vector<vector<int>> &arr1, vector<vector<int>> &arr2, vector<vector<int>> &result, int r, int c)
+void sum_two_matrics(int arr1[], int arr2[], int reslut[], int size)
 {
-    if (r < 0)
+    if (!size)
         return;
-    sum_matrics(arr1, arr2, result, r - 1, c);
-    if (c < 0)
-        return;
-    sum_matrics(arr1, arr2, result, r, c - 1);
-    result[r][c] = arr1[r][c] + arr2[r][c];
+    sum_two_matrics(arr1, arr2, reslut, size - 1);
+    reslut[size - 1] = arr1[size - 1] + arr2[size - 1];
 }
 
 int main()
@@ -31,19 +19,23 @@ int main()
 
     int r, c;
     cin >> r >> c;
-    vector<vector<int>> arr1(r, vector<int>(c)), arr2(r, vector<int>(c)), result(r, vector<int>(c));
 
-    for (int i = 0; i < r; i++)
-        for (int j = 0; j < c; j++)
-            cin >> arr1[i][j];
+    int arr1[r * c], arr2[r * c], result[r * c];
 
-    for (int i = 0; i < r; i++)
-        for (int j = 0; j < c; j++)
-            cin >> arr2[i][j];
+    for (int i = 0; i < r * c; i++)
+        cin >> arr1[i];
 
-    sum_matrics(arr1, arr2, result, r - 1, c - 1);
+    for (int i = 0; i < r * c; i++)
+        cin >> arr2[i];
 
-    cout << result;
+    sum_two_matrics(arr1, arr2, result, r * c);
+
+    for (int i = 0; i < r * c; i++)
+    {
+        cout << result[i] << ' ';
+        if (i % c == c - 1)
+            cout << '\n';
+    }
 
     return 0;
 }
