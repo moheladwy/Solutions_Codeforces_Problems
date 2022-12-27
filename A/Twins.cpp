@@ -15,7 +15,7 @@ int main()
     ios::sync_with_stdio(false);
     cout.tie(NULL);
 
-    int t, sum1 = 0, sum2 = 0;
+    int t;
     cin >> t;
     if (t == 1)
     {
