@@ -12,9 +12,9 @@ long long fact(int num)
     return num * fact(num - 1);
 }
 
-long double Combination(int N, int R)
+long long combination(int N, int R)
 {
-    return fact(N) / (fact(R) * fact(N - R));
+    return fact(N) / (fact(R) * fact(abs(N - R)));
 }
 
 int main()
@@ -22,6 +22,6 @@ int main()
     foi;
     int N, R;
     cin >> N >> R;
-    cout << Combination(N, R);
+    cout << combination(N, R);
     return 0;
 }
