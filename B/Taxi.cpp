@@ -19,14 +19,14 @@ void solve(int &n)
 
     nTaxies += (groups[2] / 2);
     groups[2] = (groups[2] % 2);
-
-    nTaxies += (groups[1] / 4);
-    groups[1] = (groups[1] % 4);
-
-    if (groups[1] + groups[2] > 4)
-        nTaxies += 2;
-    else if (groups[1] + groups[2] > 0)
+    if (groups[2])
+    {
         nTaxies++;
+        groups[1] -= 2;
+        if (groups[1] < 0)
+            groups[1] = 0;
+    }
+    nTaxies += ((groups[1] + 3) / 4);
 
     cout << nTaxies;
 }
